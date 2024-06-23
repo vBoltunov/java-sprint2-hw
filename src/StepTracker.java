@@ -41,9 +41,7 @@ public class StepTracker {
             System.out.println("Количество шагов не может быть отрицательным. А у вас: " + steps);
         }
 
-        // получение соответствующего объекта MonthData из массива
         MonthData monthData = monthToData[month - 1];
-        // сохранение полученных данных
         monthData.days[day - 1] = steps;
     }
 
@@ -68,9 +66,7 @@ public class StepTracker {
             return;
         }
 
-        // получение соответствующего месяца
         MonthData monthData = monthToData[month - 1];
-        // получение суммы шагов за месяц
         int sumSteps = monthData.sumStepsFromMonth();
 
         monthData.printDaysAndStepsFromMonth();
