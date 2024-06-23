@@ -41,12 +41,15 @@ public class StepTracker {
             System.out.println("Количество шагов не может быть отрицательным. А у вас: " + steps);
         }
 
+        // получение соответствующего месяца
         MonthData monthData = monthToData[month - 1];
+        // запись количества шагов в указанный день
         monthData.days[day - 1] = steps;
     }
 
     void changeStepGoal() {
         System.out.println("Введите новую цель по количеству шагов в день.");
+
         int stepsPerDay = scanner.nextInt();
 
         if (stepsPerDay <= 0) {
@@ -66,9 +69,12 @@ public class StepTracker {
             return;
         }
 
+        // получение соответствующего месяца
         MonthData monthData = monthToData[month - 1];
+        // получение суммы шагов за месяц
         int sumSteps = monthData.sumStepsFromMonth();
 
+        // вывод общей статистики по дням
         monthData.printDaysAndStepsFromMonth();
 
         System.out.println("Всего пройдено шагов за месяц: " + sumSteps);
@@ -84,6 +90,7 @@ public class StepTracker {
 
         System.out.println("Лучшая серия: " + monthData.bestSeries(goalByStepsPerDay) + " дней.");
 
+        // Пустая строка-разделитель
         System.out.println();
     }
 }
