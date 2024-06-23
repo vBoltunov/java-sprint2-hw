@@ -5,7 +5,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         StepTracker tracker = new StepTracker(scanner);
 
-        System.out.println("Добро пожаловать в приложение \"Счётчик калорий\"");
+        System.out.println("Добро пожаловать в приложение \"Счётчик калорий\"!");
 
         while (true) {
             printMenu();
@@ -19,15 +19,16 @@ public class Main {
             } else if (command == 3) {
                 tracker.printStatistic();
             } else if (command == 4) {
-                System.out.println("Выход");
+                System.out.println("Спасибо, что воспользовались нашим приложением!");
                 return;
+            } else {
+                System.out.println("Такой команды пока нет!");
             }
-
         }
     }
 
     static void printMenu() {
-        System.out.println("Что вы хотите сделать?");
+        System.out.println("Выберите одну из команд:");
         System.out.println("1. Ввести количество шагов за определённый день");
         System.out.println("2. Изменить цель по количеству шагов в день");
         System.out.println("3. Напечатать статистику за определённый месяц");

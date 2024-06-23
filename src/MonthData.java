@@ -5,7 +5,7 @@ public class MonthData {
         System.out.println("Статистика по дням:");
 
         for (int i = 0; i < days.length; i++) {
-            System.out.println("День " + (i + 1) + ": " + days[i]);
+            System.out.println((i + 1) + " день: " + days[i]);
         }
     }
 
