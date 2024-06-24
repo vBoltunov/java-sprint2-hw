@@ -63,6 +63,9 @@ public class StepTracker {
         goalByStepsPerDay = stepsPerDay;
 
         System.out.println("Новая цель: " + goalByStepsPerDay + " шагов в день");
+
+        // Пустая строка-разделитель
+        System.out.println();
     }
 
     void printStatistic() {
