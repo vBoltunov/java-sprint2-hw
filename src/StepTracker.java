@@ -2,15 +2,15 @@ import java.util.Scanner;
 
 public class StepTracker {
     Scanner scanner;
-    MonthData[] monthToData = new MonthData[12];
+    MonthData[] monthToDataArray = new MonthData[12];
     Converter converter = new Converter();
     int goalByStepsPerDay = 10000;
 
     StepTracker(Scanner scan) {
         scanner = scan;
 
-        for (int i = 0; i < monthToData.length; i++) {
-            monthToData[i] = new MonthData();
+        for (int i = 0; i < monthToDataArray.length; i++) {
+            monthToDataArray[i] = new MonthData();
         }
     }
 
@@ -42,7 +42,7 @@ public class StepTracker {
         }
 
         // получение соответствующего месяца
-        MonthData monthData = monthToData[month - 1];
+        MonthData monthData = monthToDataArray[month - 1];
         // запись количества шагов в указанный день
         monthData.days[day - 1] = steps;
 
@@ -79,7 +79,7 @@ public class StepTracker {
         }
 
         // получение соответствующего месяца
-        MonthData monthData = monthToData[month - 1];
+        MonthData monthData = monthToDataArray[month - 1];
         // получение суммы шагов за месяц
         int sumSteps = monthData.sumStepsFromMonth();
 
