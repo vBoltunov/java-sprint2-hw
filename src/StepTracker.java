@@ -15,7 +15,7 @@ public class StepTracker {
     }
 
     void addNewNumberStepsPerDay() {
-        System.out.println("Введите номер месяца:");
+        System.out.print("Введите номер месяца: ");
 
         int month = scanner.nextInt();
 
@@ -24,7 +24,7 @@ public class StepTracker {
             return;
         }
 
-        System.out.println("Введите день от 1 до 30 (включительно)");
+        System.out.print("Введите день от 1 до 30 (включительно): ");
 
         int day = scanner.nextInt();
 
@@ -33,7 +33,7 @@ public class StepTracker {
             return;
         }
 
-        System.out.println("Введите количество шагов:");
+        System.out.print("Введите количество шагов: ");
 
         int steps = scanner.nextInt();
 
@@ -45,10 +45,14 @@ public class StepTracker {
         MonthData monthData = monthToData[month - 1];
         // запись количества шагов в указанный день
         monthData.days[day - 1] = steps;
+
+        System.out.println("Информация внесена в базу банных Счётчика калорий.");
+        // Пустая строка-разделитель
+        System.out.println();
     }
 
     void changeStepGoal() {
-        System.out.println("Введите новую цель по количеству шагов в день:");
+        System.out.print("Введите новую цель по количеству шагов в день: ");
 
         int stepsPerDay = scanner.nextInt();
 
@@ -62,7 +66,7 @@ public class StepTracker {
     }
 
     void printStatistic() {
-        System.out.println("Введите число месяца");
+        System.out.print("Введите число месяца: ");
 
         int month = scanner.nextInt();
 

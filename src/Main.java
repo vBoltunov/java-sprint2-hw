@@ -28,10 +28,11 @@ public class Main {
     }
 
     static void printMenu() {
-        System.out.println("Выберите одну из команд:");
+        System.out.println("Что Вы желаете сделать?");
         System.out.println("1. Ввести количество шагов за определённый день");
         System.out.println("2. Изменить цель по количеству шагов в день");
         System.out.println("3. Напечатать статистику за определённый месяц");
         System.out.println("4. Выйти из приложения");
+        System.out.print("Ваш выбор: ");
     }
 }
