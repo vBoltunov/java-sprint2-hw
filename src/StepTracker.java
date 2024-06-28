@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class StepTracker {
+    int number;
     Scanner scanner;
     MonthData[] monthToDataArray = new MonthData[12];
     Converter converter = new Converter();
@@ -14,10 +15,22 @@ public class StepTracker {
         }
     }
 
+    int userInputValidation() {
+        while (true) {
+            try {
+                number = Integer.parseInt(scanner.next());
+                break;
+            } catch (NumberFormatException e) {
+                System.out.print("Вы ввели не число!\nПопробуйте ещё раз: ");
+            }
+        }
+        return number;
+    }
+
     void addNewNumberStepsPerDay() {
         System.out.print("Введите номер месяца: ");
 
-        int month = scanner.nextInt();
+        int month = userInputValidation();
 
         if (month < 1 || month > 12) {
             System.out.println("Месяц должен быть от 1 до 12. А у вас: " + month);
@@ -26,7 +39,7 @@ public class StepTracker {
 
         System.out.print("Введите день от 1 до 30 (включительно): ");
 
-        int day = scanner.nextInt();
+        int day = userInputValidation();
 
         if (day < 1 || day > 30) {
             System.out.println("День должен быть от 1 до 30. А у вас: " + day);
@@ -35,7 +48,7 @@ public class StepTracker {
 
         System.out.print("Введите количество шагов: ");
 
-        int steps = scanner.nextInt();
+        int steps = userInputValidation();
 
         if (steps < 0) {
             System.out.println("Количество шагов не может быть отрицательным. А у вас: " + steps);
@@ -54,7 +67,7 @@ public class StepTracker {
     void changeStepGoal() {
         System.out.print("Введите новую цель по количеству шагов в день: ");
 
-        int stepsPerDay = scanner.nextInt();
+        int stepsPerDay = userInputValidation();
 
         if (stepsPerDay <= 0) {
             System.out.println("Количество шагов не может быть отрицательным или равным нулю. А у вас: " + stepsPerDay);
@@ -71,7 +84,7 @@ public class StepTracker {
     void printStatistic() {
         System.out.print("Введите число месяца: ");
 
-        int month = scanner.nextInt();
+        int month = userInputValidation();
 
         if (month < 1 || month > 12) {
             System.out.println("Месяц должен быть от 1 до 12. А у вас: " + month);

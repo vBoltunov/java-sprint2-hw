@@ -10,7 +10,7 @@ public class Main {
         while (true) {
             printMenu();
 
-            int command = scanner.nextInt();
+            int command = tracker.userInputValidation();
 
             if (command == 1) {
                 tracker.addNewNumberStepsPerDay();
