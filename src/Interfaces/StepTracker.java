@@ -1,3 +1,7 @@
+package Interfaces;
+
+import Data.MonthData;
+
 import java.util.Scanner;
 
 public class StepTracker {
@@ -15,7 +19,7 @@ public class StepTracker {
         }
     }
 
-    int userInputValidation() {
+    public int userInputValidation() {
         while (true) {
             try {
                 number = Integer.parseInt(scanner.next());
@@ -27,7 +31,7 @@ public class StepTracker {
         return number;
     }
 
-    void addNewNumberStepsPerDay() {
+    public void addNewNumberStepsPerDay() {
         System.out.print("Введите номер месяца: ");
 
         int month = userInputValidation();
@@ -64,7 +68,7 @@ public class StepTracker {
         System.out.println();
     }
 
-    void changeStepGoal() {
+    public void changeStepGoal() {
         System.out.print("Введите новую цель по количеству шагов в день: ");
 
         int stepsPerDay = userInputValidation();
@@ -81,7 +85,7 @@ public class StepTracker {
         System.out.println();
     }
 
-    void printStatistic() {
+    public void printStatistic() {
         System.out.print("Введите число месяца: ");
 
         int month = userInputValidation();

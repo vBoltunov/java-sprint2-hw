@@ -1,7 +1,9 @@
-public class MonthData {
-    int[] days = new int[30];
+package Data;
 
-    void printDaysAndStepsFromMonth() {
+public class MonthData {
+    public int[] days = new int[30];
+
+    public void printDaysAndStepsFromMonth() {
         System.out.println("Статистика по дням:");
 
         for (int i = 0; i < days.length; i++) {
@@ -9,7 +11,7 @@ public class MonthData {
         }
     }
 
-    int sumStepsFromMonth() {
+    public int sumStepsFromMonth() {
         int sumSteps = 0;
 
         for (int i = 0; i < days.length; i++) {
@@ -18,7 +20,7 @@ public class MonthData {
         return sumSteps;
     }
 
-    int maxSteps() {
+    public int maxSteps() {
         int maxSteps = 0;
 
         for (int i = 0; i < days.length; i++) {
@@ -29,7 +31,7 @@ public class MonthData {
         return maxSteps;
     }
 
-    int bestSeries(int goalByStepsPerDay) {
+    public int bestSeries(int goalByStepsPerDay) {
         int currentSeries = 0;
         int finalSeries = 0;
 
